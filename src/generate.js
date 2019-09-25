@@ -1,4 +1,4 @@
-const testFolder = './src/';
+const readFolder = './src/';
 const fs = require('fs');
 
 try {
@@ -9,7 +9,7 @@ try {
   console.error(err);
 }
 
-fs.readdirSync(testFolder).forEach(file => {
+fs.readdirSync(readFolder).forEach(file => {
   const imp = file.split('.')[0];
   if (file.includes('.css')) {
     const write = `import ${imp} from './${file}' \n`;
